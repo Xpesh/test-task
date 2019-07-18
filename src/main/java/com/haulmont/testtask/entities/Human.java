@@ -38,16 +38,4 @@ public class Human {
         sb.append(" ").append(firstName).append(" ").append(middleName);
         return sb.toString();
     }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }

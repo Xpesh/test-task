@@ -4,7 +4,6 @@ import com.haulmont.testtask.MainUI;
 import com.haulmont.testtask.dao.Dao;
 import com.haulmont.testtask.entities.Doctor;
 import com.haulmont.testtask.entities.Recipe;
-import com.vaadin.data.validator.StringLengthValidator;
 import com.vaadin.event.ItemClickEvent;
 import com.vaadin.ui.*;
 import com.vaadin.ui.Button;
