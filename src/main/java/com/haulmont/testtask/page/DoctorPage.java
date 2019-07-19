@@ -46,12 +46,8 @@ public class DoctorPage extends AbstractPage {
         grid.addItemClickListener((ItemClickEvent.ItemClickListener) event -> {
             switch ((String)event.getPropertyId()){
                 case UPDATE_BUTTON_COLUMN_NAME :{
-                    String[] args = new String[5];
-                    args[0] = event.getItem().getItemProperty(ID_COLUMN_NAME).getValue().toString();
-                    args[1] = event.getItem().getItemProperty(FIRST_NAME_COLUMN_NAME).getValue().toString();
-                    args[2] = event.getItem().getItemProperty(MIDDLE_NAME_COLUMN_NAME).getValue().toString();
-                    args[3] = event.getItem().getItemProperty(LAST_NAME_COLUMN_NAME).getValue().toString();
-                    args[4] = event.getItem().getItemProperty(SPECIALIZATION_NAME_COLUMN_NAME).getValue().toString();
+                    String[] args = getValueRow(event,ID_COLUMN_NAME,FIRST_NAME_COLUMN_NAME,MIDDLE_NAME_COLUMN_NAME,
+                            LAST_NAME_COLUMN_NAME,SPECIALIZATION_NAME_COLUMN_NAME);
                     createWindow(ui,"Изменение",getForm(false,args),WIDTH_WINDOW);
                     break;
                 }

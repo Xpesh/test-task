@@ -4,6 +4,7 @@ import com.vaadin.data.Validator;
 import com.vaadin.data.validator.NullValidator;
 import com.vaadin.data.validator.RegexpValidator;
 import com.vaadin.data.validator.StringLengthValidator;
+import com.vaadin.event.ItemClickEvent;
 import com.vaadin.server.Sizeable;
 import com.vaadin.shared.ui.combobox.FilteringMode;
 import com.vaadin.ui.*;
@@ -64,5 +65,12 @@ abstract class AbstractPage implements Page {
         comboBox.setSizeFull();
         comboBox.addValidator(getValidatorIsNotNull());
         return comboBox;
+    }
+
+    String[] getValueRow(ItemClickEvent event,String...columnName){
+        String[] strings = new String[columnName.length];
+        for (int i = 0; i < columnName.length; i++)
+            strings[i] = event.getItem().getItemProperty(columnName[i]).getValue().toString();
+        return strings;
     }
 }
